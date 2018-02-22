@@ -8,6 +8,8 @@
 
 A compatibility-based "Match Maker" application — basically a dating app. This full-stack site will take in results from users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. 
 
+[**Click Here To Check It Out!**](https://stark-beach-28782.herokuapp.com/)
+
 ## How it works
 
 Friends are stored as objects in the following format:
@@ -33,10 +35,10 @@ Friends are stored as objects in the following format:
 
 To determine most compatible friend, current user's scores are compared against those from other users, question by question to calculate the `totalDifference`.
 
-     * Example: 
-       * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`
-       * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`
-       * Total Difference: **2 + 1 + 2 =** **_5_**
+* Example: 
+    * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`
+    * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`
+    * Total Difference: **2 + 1 + 2 =** **_5_**
 
 > NOTE: Difference means absolute value of the differences. App will calculate both `5-3` and `3-5` as `2`.
 
@@ -51,7 +53,7 @@ The closest match will be the user with the least amount of difference.
 
 #### Disclaimer
 
-All content is scraped from [Curiosity.com](https://curiosity.com/)
+All demo user images are sourced from the web.
 
 
 #### Enjoy!
