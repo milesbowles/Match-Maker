@@ -1,10 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Match Maker</title>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
 </head>
+
 <body>
+    <div class="container">
+
+        <h2>Survey Questions</h2>
+
+        <h6>
+            <strong>Name</strong>
+        </h6>
+
+        <div class="input-field col s6">
+            <input placeholder="(Required)" id="name" type="text" class="validate" required>
+        </div>
+
+        <h6>
+            <strong>Link to photo</strong>
+        </h6>
+
+        <div class="input-field col s6">
+            <input placeholder="(Required)" id="picture" type="text" class="validate" required>
+        </div>
+
+        <h6>
+            <strong>Question 1</strong>
+        </h6>
+        <h7>Eating food is a legitimate hobby.</h7>
+        <select data-placeholder="" class="option-menu" id="q1">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h6>
+            <strong>Question 2</strong>
+        </h6>
+        <h7>Camping is more fun than staying in a hotel.</h7>
+        <select data-placeholder="" class="option-menu" id="q2">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h6>
+            <strong>Question 3</strong>
+        </h6>
+        <h7>Work is fun.</h7>
+        <select data-placeholder="" class="option-menu" id="q3">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h6>
+            <strong>Question 4</strong>
+        </h6>
+        <h7>Dogs are better than cats.</h7>
+        <select data-placeholder="" class="option-menu" id="q4">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h6>
+            <strong>Question 5</strong>
+        </h6>
+        <h7>Reality TV upsets you.</h7>
+        <select data-placeholder="" class="option-menu" id="q5">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h6>
+            <strong>Question 6</strong>
+        </h6>
+        <h7>Pirating movies is chill.</h7>
+        <select data-placeholder="" class="option-menu" id="q6">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h6>
+            <strong>Question 7</strong>
+        </h6>
+        <h7>One day we will all be robots.</h7>
+        <select data-placeholder="" class="option-menu" id="q7">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h6>
+            <strong>Question 8</strong>
+        </h6>
+        <h7>If there was another Woodstock you would attend.</h7>
+        <select data-placeholder="" class="option-menu" id="q8">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h6>
+            <strong>Question 9</strong>
+        </h6>
+        <h8>Your the kind of person who would find away to pick up your pets feces even if you didn't have a bag on you.</h8>
+        <select data-placeholder="" class="option-menu" id="q9">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h6>
+            <strong>Question 10</strong>
+        </h6>
+        <h7>Coffee is a regular.</h7>
+        <select data-placeholder="" class="option-menu" id="q10">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <br>
+        <br>
+
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn" id="submit">Submit</a>
+
+        <br>
+        <br>
+
+        <footer class="footer">
+            <p>
+                <a href="/api/friends">API Friends List</a> |
+                <a href="https://github.com/milesbowles/">GitHub Repo</a>
+            </p>
+        </footer>
+
+
+    </div>
+
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h7>You Matched With</h7>
+            <h2 id="matchName"></h2>
+            <img id="matchPicture" src="" alt="Friends Picture" style="width:250px">
+        </div>
+        <div class="modal-footer">
+            <a href="/" class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        // Initializes JQuery for Materialize 
+        $('select').material_select();
+
+        // Initializes modal
+        $('.modal').modal();
+
+        // Capture the form inputs 
+        $("#submit").on("click", function () {
+
+            // Form validation
+            function validateForm() {
+                var isValid = true;
+                // Checks if name and picture have been entered
+                if ($('#name').val() === '' || $('#name').val() === '') {
+                    isValid = false;
+                }
+                // Checks to make sure all questions have been answered
+                for (var i = 1; i <= 10; i++) {
+                    console.log('made it here');
+
+                    var answer = $('#q' + i).val();
+                    if (answer === '') {
+                        isValid = false;
+                    }
+                }
+                return isValid;
+            }
+
+            // Get user answers
+            function getAnswers(user) {
+                for (var i = 1; i <= 10; i++) {
+                    var answer = parseInt($('#q' + i).val());
+                    user.answers.push(answer);
+                }
+            }
+
+            // If all required fields are filled
+            if (validateForm()) {
+
+                console.log('form validated');
+
+                // Create an object for the users responses
+                var user = {
+                    name: $("#name").val(),
+                    picture: $("#picture").val(),
+                    answers: []
+                }
+
+                getAnswers(user);
+                console.log('User answers = ' + user.answers);
+
+                // Grab the URL of the website
+                var currentURL = window.location.origin;
+
+                // AJAX post the data to the friends API. 
+                $.post(currentURL + "/api/friends", user, function (match) {
+                    console.log(match);
+
+                    // Display match info
+                    $("#matchName").text(match.name);
+                    $('#matchPicture').attr("src", match.picture);
+
+                    // Show the modal with the best match 
+                    $(".modal").modal('open');
+
+                });
+            }
+            else {
+                alert("Please complete everything before submitting!");
+            }
+
+            return false;
+        });
+
+
+    </script>
 
 </body>
+
 </html>
